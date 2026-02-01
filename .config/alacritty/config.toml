@@ -1,0 +1,64 @@
+[general]
+import = [
+  "~/.config/alacritty/fonts.toml",
+  "~/.config/alacritty/colors.toml",
+]
+live_config_reload = true
+ipc_socket = true
+
+[font]
+size = 9
+
+[font.normal]
+# family = "JetBrainsMono Nerd Font"
+family = "FiraCode Nerd Font"
+
+[font.offset]
+x = 0
+y = 0
+
+[env]
+TERM = "alacritty"
+WINIT_X11_SCALE_FACTOR = "1.1"
+
+[window]
+opacity = 0.86
+blur = true
+dynamic_padding = true
+decorations = "full"
+class = { instance = "Alacritty", general = "Alacritty" }
+startup_mode = "Windowed"
+dynamic_title = true
+decorations_theme_variant = "None"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+# [[hints.enabled]]
+# command         = "xdg-open"
+# hyperlinks      = true
+# post_processing = true
+# persist         = false
+# mouse.enabled   = true
+# binding         = { key = "U", mods = "Control|Shift" }
+# regex           = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩‘]+"
+
+[debug]
+render_timer = false
+persistent_logging = false
+log_level = "Warn"
+renderer = "None"
+print_events = false
+highlight_damage = false
+prefer_egl = false
+
+[bell]
+animation = "Linear"
+duration = 20
+command = { program = "paplay", args = [
+  "/usr/share/sounds/freedesktop/stereo/dialog-error.oga",
+] }
