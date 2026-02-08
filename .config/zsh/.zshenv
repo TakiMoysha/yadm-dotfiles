@@ -5,7 +5,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/linux-home/system/pcl-89/.cache"
 
 export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
-export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc.py"
+# export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc.py"
 
 export GOPATH="$XDG_DATA_HOME/go"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
