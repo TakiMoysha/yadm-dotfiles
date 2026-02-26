@@ -88,21 +88,9 @@ alias py_create_package="uv init --package"
 alias ws="websocat"
 alias uvr="uv run"
 alias ctunnel="cloudflared tunnel"
-alias _package_manager="paru" # yay, pacman
-# alias adb='HOME="$XDG_DATA_HOME"/android adb' # is used in android development
 alias oc="opencode"
-#
-function sys-update() {
-  """first - read news, if all good - update, else prevent"""
-  # informant read
-  _package_manager -Syu
-
-  # обновление конфигураций: pacdiff
-  # проверка состояния: pacman -Qk
-  """
-  cat /etc/issue -> Archcraft \r (\l)
-  """
-}
+alias google-chrome="brave"
+alias chromium="brave"
 
 alias unpack="ouch"
 
@@ -137,97 +125,11 @@ function nicemount() { (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2="";1') 
 alias pdm=podman
 alias bp=boilerplates # for https://github.com/ChristianLempa/boilerplates/issues
 
-alias kafka_server_up="podman run -d --replace \\
-  --name devlab-kafka.dev \\
-  --network host \\
-  --pod devlab-kafka.pod \\
-  -e KAFKA_CFG_NODE_ID=0 \\
-  -e KAFKA_CFG_PROCESS_ROLES=controller,broker \\
-  -e KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093 \\
-  -e KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT \\
-  -e KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=0@devlab-kafka.dev:9093 \\
-  -e KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER \\
-  docker.io/bitnami/kafka:latest"
-alias kafka_client_up="podman run -d --replace \\
-  --name devlab-kafka-client \\
-  --network host \\
-  --pod devlab-kafka.pod \\
-  -e KAFKA_CFG_NODE_ID=1 \\
-  -e KAFKA_CFG_PROCESS_ROLES=client \\
-  -e KAFKA_CFG_LISTENERS=PLAINTEXT://:9092 \\
-  -e KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT \\
-  -e KAFKA_CFG_ZOOKEEPER_CONNECT=devlab-zookeeper:2181 \\
-  docker.io/bitnami/kafka:latest"
-alias zookeeper_up="podman run -d --replace \\
-  --name devlab-zookeeper \\
-  --network host \\
-  --pod devlab-kafka.pod \\
-  docker.io/bitnami/zookeeper:latest"
-alias mongodb_up="podman run -d --replace \\
-  --name devlab-mongodb.dev \\
-  --network host \\
-  docker.io/bitnami/mongodb:latest"
-alias rabbitmq_up="podman run -d --replace \\
-  --name devlab-rabbitmq.dev \\
-  --network host \\
-  -e RABBITMQ_USERNAME=devlab \\
-  -e RABBITMQ_PASSWORD=123321 \\
-  docker.io/bitnami/rabbitmq:latest"
-alias postgres_up="podman run -d --replace \\
-  --name devlab-postgres \\
-  --health-cmd 'pg_isready -h localhost -q' \\
-  -v 'devlab-postgres:/bitnami/postgresql' \\
-  -e POSTGRES_PASSWORD=postgres \\
-  --network host \\
-  --user=$(id -u) \\
-  --userns=keep-id docker.io/bitnami/postgresql:latest"
-alias redis_up="podman run -d --replace \\
-  --name devlab-redis.dev \\
-  -e ALLOW_EMPTY_PASSWORD=yes \\
-  --network host \\
-  docker.io/bitnami/redis:latest"
-
-alias minio_up="podman run -d --replace  \\
-  --network host  \\
-  --name devlab-minio.dev  \\
-  -v 'homelab-minio:/bitnami/minio/data' \\
-  -e MINIO_ROOT_USER='minio-root'  \\
-  -e MINIO_ROOT_PASSWORD='minio-root-password'  \\
-  -e MINIO_SERVER_ACCESS_KEY='minio-access-key' \\
-  -e MINIO_SERVER_SECRET_KEY='minio-secret-key' \\
-  --user=$(id -u) --userns=keep-id  \\
-  docker.io/bitnami/minio:latest"
-
-
-
-function init_devlab() {  
-  if [[ -z "$DEVLAB_CODING_DIR" ]]; then
-    echo "Error: DEVLAB_CODING_DIR is not set."
-    return 1
-  fi
-
-  if [[ -z "$STOREDIR" ]]; then
-    echo "Error: STOREDIR is not set."
-    return 1
-  fi
-
-
-  if [[ ! -d "$DEVLAB_CODING_DIR" ]]; then
-    mkdir -p "$DEVLAB_CODING_DIR"
-    echo "Created directory: $DEVLAB_CODING_DIR"
-  else
-    echo "Directory already exists <DEVLAB_CODING_DIR>: $DEVLAB_CODING_DIR"
-  fi
-
-  if [[ ! -d "$DEVLAB_CONTAINERS_DIR" ]]; then
-    mkdir -p "$DEVLAB_CONTAINERS_DIR"
-    echo "Created directory: $DEVLAB_CONTAINERS_DIR"
-  else
-    echo "Directory already exists <DEVLAB_CONTAINERS_DIR>: $DEVLAB_CONTAINERS_DIR"
-  fi
-}
-
 # if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 #   tmux attach-session -t default || tmux new-session -s default
 # fi
 
+
+export NVM_DIR="$HOME/.local/share/nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"

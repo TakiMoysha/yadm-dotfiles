@@ -27,7 +27,7 @@ export NVM_DIR="$XDG_DATA_HOME/nvm"
 export PATH="$CARGO_HOME/bin:$BUN_INSTALL/bin:$XDG_BIN_HOME:$PATH"
 
 # devlab & workspace
-# export STOREDIR="$HOME/linux-media"
+export STOREDIR="/run/media/takimoysha/secondary/takimoysha/"
 
 export WORKSPACE_DIR="$HOME/workspace/"
 
@@ -48,6 +48,7 @@ export BROWSER="vavaldi-stable"
 # export XDG_SESSION_TYPE=wayland
 # export SDL_VIDEODRIVER=wayland
 # export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export RUSTBRIDGE_WORKSPACE="$WORKSPACE_DIR/projects/rustbridge/"
 # =============================================================
 
 
