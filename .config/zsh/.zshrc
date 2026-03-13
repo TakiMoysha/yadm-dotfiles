@@ -48,15 +48,15 @@ plugins=(
   git
   rust
   bun
-  sudo
-  supervisor
+  # sudo
+  # supervisor
   # podman
   # docker
-  kubectl
-  dotenv
-  zsh-uv-env
-  uv
-  tmux
+  # kubectl
+  # dotenv
+  # zsh-uv-env
+  # uv
+  # tmux
 )
 
 # autocompletions for k8s
@@ -129,7 +129,5 @@ alias bp=boilerplates # for https://github.com/ChristianLempa/boilerplates/issue
 #   tmux attach-session -t default || tmux new-session -s default
 # fi
 
-
-export NVM_DIR="$HOME/.local/share/nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"

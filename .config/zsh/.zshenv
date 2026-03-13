@@ -8,7 +8,6 @@ export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
 # export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc.py"
 
 export GOPATH="$XDG_DATA_HOME/go"
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export CARGO_HOME="$HOME/linux-home/system/pcl-89/.cargo"
 # export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export RUSTUP_HOME="$HOME/linux-home/system/pcl-89/.local/share/rustup"
@@ -39,7 +38,7 @@ export MC_CONFIG_DIR="$XDG_CONFIG_HOME/mcli/"
 
 # ============================================================ debug
 export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
-export BROWSER="vavaldi-stable"
+export BROWSER="vivaldi-stable"
 # export QT_QPA_PLATFORM="wayland;xcb"
 # export QT_QPA_PLATFORMTHEME=qt5ct
 # export CLUTTER_BACKEND=wayland
