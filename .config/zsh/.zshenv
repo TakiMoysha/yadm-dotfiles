@@ -8,10 +8,9 @@ export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
 # export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc.py"
 
 export GOPATH="$XDG_DATA_HOME/go"
+export UV_INSTALL_DIR="$HOME/linux-home/system/pcl-89/"
 export CARGO_HOME="$HOME/linux-home/system/pcl-89/.cargo"
-# export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export RUSTUP_HOME="$HOME/linux-home/system/pcl-89/.local/share/rustup"
-# export BUN_INSTALL="$XDG_DATA_HOME/bun"
 export BUN_INSTALL="$HOME/linux-home/system/pcl-89/.local/share/bun"
 
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
@@ -26,7 +25,7 @@ export NVM_DIR="$XDG_DATA_HOME/nvm"
 export PATH="$CARGO_HOME/bin:$BUN_INSTALL/bin:$XDG_BIN_HOME:$PATH"
 
 # devlab & workspace
-export STOREDIR="/run/media/takimoysha/secondary/takimoysha/"
+export STOREDIR="/run/media/secondary/takimoysha/"
 
 export WORKSPACE_DIR="$HOME/workspace/"
 
@@ -49,5 +48,4 @@ export BROWSER="vivaldi-stable"
 # export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export RUSTBRIDGE_WORKSPACE="$WORKSPACE_DIR/projects/rustbridge/"
 # =============================================================
-
 
