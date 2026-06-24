@@ -1,3 +1,5 @@
+export SWAY_UNSUPPORTED_GPU=true
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_BIN_HOME="$HOME/.local/bin"
@@ -28,6 +30,8 @@ export PATH="$CARGO_HOME/bin:$BUN_INSTALL/bin:$XDG_BIN_HOME:$PATH"
 export STOREDIR="/run/media/secondary/takimoysha/"
 
 export WORKSPACE_DIR="$HOME/workspace/"
+
+# export CARGO_TARGET_DIR="" # use mise for specific repo (monorepo && orchestration)
 
 # homelab
 #export HOMELAB_CONTAINERS_DIR="$STOREDIR/containers/homelab"

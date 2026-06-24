@@ -84,11 +84,10 @@ alias nvidia-settings="nvidia-settings --config=$XDG_CONFIG_HOME/nvidia/settings
 alias filediff="meld"
 
 # development aliases
-alias py_create_package="uv init --package"
 alias ws="websocat"
 alias uvr="uv run"
+alias brd="bun run dev"
 alias ctunnel="cloudflared tunnel"
-alias oc="opencode"
 alias google-chrome="brave"
 alias chromium="brave"
 
@@ -123,7 +122,7 @@ function nicemount() { (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2="";1') 
 # for localstack compatibility https://docs.localstack.cloud/references/podman/
 # alias docker=podman
 alias pdm=podman
-alias bp=boilerplates # for https://github.com/ChristianLempa/boilerplates/issues
+# alias bp=boilerplates # for https://github.com/ChristianLempa/boilerplates/issues
 
 # if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 #   tmux attach-session -t default || tmux new-session -s default
