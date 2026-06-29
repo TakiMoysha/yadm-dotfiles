@@ -80,6 +80,7 @@ if type clipcat-menu >/dev/null 2>&1; then
 fi
 
 # facility aliases
+alias tui-browser="carbonyl --zoom=300 --bitmap"
 alias nvidia-settings="nvidia-settings --config=$XDG_CONFIG_HOME/nvidia/settings"
 alias filediff="meld"
 
